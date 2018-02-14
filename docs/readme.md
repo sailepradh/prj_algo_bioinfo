@@ -22,5 +22,5 @@ The first thing is to break dowm the task in hands to smaller tasks and complete
     First thing to do is read the files in python as dataframe files.
     Then to seperate out the genes expression  data from the other meta information.
     use of the package to these expression data set and get the hazard cox results
-    
+    \part{}
 
