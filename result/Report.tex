@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
+\usepackage{subcaption}
 \usepackage{hyperref, url}
 \parindent 0mm
 \parskip 3mm
@@ -26,12 +27,43 @@ In the current project, we are provided a liver cancer patients of different rac
 
 \section{Method}
 
-\subsection{TCGA Dataset}
-\subsection {Preprocessing of Dataset}
-\subsection{Cox proportional Hazard model}
+	\subsection{TCGA Dataset}
+The  TCGA dataset for the analysis was download from the (http://kaell.org/files/survivalLIHC.txt) site. As already stated in the project guidelines, these are the cancer patient expression data from the sequenced liver tumor.  Additionally there are few other features implication each cancer patient ethnicity, sex and cancer types.  These data were first read into python notebook as pandas dataframe  as done in  jupyter notebook.  Additional exploratory analysis was done in the notebook itself. The  dataset consists of both categorical features and numerical data of gene expression dataset. 
+
+	\subsection {Preprocessing of Dataset}
+In the survival analysis, the different categorical features were provided of liver cancer patients. These categorical features includes Gender, Race, Stage , Status, Age and LivingDays of different cancer patients.  These categorical features were then coded into different numerical codes for Originally, the dataset consists of gene expression profile os $19,571$. Furthermore, only those gene expression data were taken which had at least an expression in one of the patients. 
+
+	\subsection{Cox proportional Hazard model}
+
 
 
  \section{Result}
+ 
+ 	\subsection {TCGA Liver cancer charcterstics}
+ 
+ The data consists of 6 catagorical features as 
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{livingstatusandstatus.png}
+        \caption{A gull}
+        \label{fig:gull}
+    \end{subfigure}
+     \begin{subfigure}[b]{0.45\textwidth}
+       	 \includegraphics[width=\textwidth]{GenderVSstatus.png}
+          \caption{A tiger}
+          \label{fig:tiger}
+    \end{subfigure}
+    \caption{Pictures of animals}\label{fig:animals}
+\end{figure}
+  
+
+ 
+
+ 
+ \subsection {}
+\subsection {}
 
 
 
