@@ -1,4 +1,4 @@
-\documentclass[a4paper,9pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -44,24 +44,15 @@ In the survival analysis, the different categorical features were provided of li
 
  \section{Result}
  
- 	\subsection {TCGA Liver cancer characteristics}
+ 	
+	
+	\subsection {TCGA Liver Cancer cohort characterstics}
  
- The data consists of 6 categorical features as shown in table 1 . Additionally since we are interested to know the dependent variable of event that in our case alive and death as a function of Living day we can observe the marked difference of alive and death events in patient cohort .  Additionally, there is markedly difference in gender distribution  in cancer cohort with more than half of the patient are male as shown in fig 2  and table 1. 
-
+The cancer cohort consists of different phenotypic features such liver cancer types, age, gender, which are further summarized in table~\ref{tab:table1} . Importantly, the important dependent variable is the status of an patient cohort  and the  living days which is the measure of the time of survival.. The average living days for alive  patient cohort is  896.80 while for dead sample cohort is 655.21 with pvalues $< 0.001$ as figure~\ref{fig:status_livingdays}
  
-
-\begin{figure}[bh]
-    \centering
-      \includegraphics[width=\textwidth]{Genderandstatus.png}
-    \caption{Pictures of animals}\label{fig:animals}
-\end{figure}
-
-
-
-\begin{table}[bh]
+ \begin{table}[h]
 \centering
-\scalebox{0.5}{
-	\label{my-label}
+\scalebox{0.8}{
 	\begin{tabular}{|l|l|}
 	\hline
 		\multicolumn{2}{|l|}{\cellcolor[HTML]{96FFFB}{\color[HTML]{FE0000} Summary statistics of TCGA liver cancer cohorts}}                                                                                                                                 	\\ \hline
@@ -74,37 +65,53 @@ In the survival analysis, the different categorical features were provided of li
 		\multicolumn{2}{|c|}{Status}                                                                                                                                                                                                                         \\ \hline
 		\begin{tabular}[c]{@{}l@{}}alive\\ dead\end{tabular}                                                                                                            & \begin{tabular}[c]{@{}l@{}}234\\ 130\end{tabular}                                  \\ \hline
 	\end{tabular}}
-\caption{Pictures of animals}\label{fig:animals}
+\caption{Summary Statistics of TCGA liver cancer cohort \scriptsize}
+\label{tab:table1}
 \end{table}
-
- 
- 	\subsection {Survival analysis of dataset}
-	
-	As discussed earlier , the cox proportional hazard survival analysis gives us estimates of survival probabilities and cumulative hazard  of each transcript. As shown in the figure 2  for one of the transcripts.. The model yields the p-values for significance of the regression model.  There were $6032$ features significant at pvalue $< 0.05$  which is quite alot. Thus in order to control the multipe testing of features , we need  used the multiple hypothesis correction as indicated in Storey and tibsachi paper. 
 
 \begin{figure}[bh]
     \centering
+      \includegraphics[width=\textwidth]{Genderandstatus.png}
+    \caption{A) Number of alive and dead patients in the liver cancer cohort, the number of alive patients are nearly twice as many as dead patients. B) Distribution of living days in two status group , alive and dead. \scriptsize}
+    \label{fig:status_livingdays}
+\end{figure}
+
+ 	
+	\subsection {Gene expression survival analysis with Cox regression model }
+	
+	The survival analysis requires the time period for the event to occur (in our case death). Thus , in liver cancer cohort variable living days was taken as time variable with status as hazard event. However, other variables had $NA$ available  some categorical features so these were not taken into consideration while building Cox regression hazard model implementation in lifeline module in python. Each transcript was taken as dependent variables in the model which gave us survival probabilities and cumulative hazard estimates for each transcript as shown in the figure~\ref{fig:Baseline_hazard_and_survival}. However not all the gene transcript ran into the model as these gene expression were spares and had missing expression data. These 130 features were excluded from the current analysis.  The cox regression model was run in 19219 gene transcripts completely which gave us hazard, survival function. These estimates provided the p-values as the measure of the significance of gene expression as prognostic marker for  liver cancer survival. Out of 19219 gene expression $6032$ gene expression was considered significant at p-value $< 0.05$. However these are raw p-value without taking into account Cox regression model was run for 19219 features.   
+	
+\begin{figure}[bh]
+    \centering
       \includegraphics[width=0.75\textwidth]{survial_plot_one_mock_gene.png}
-    \caption{Pictures of animals}\label{fig:animals}
+    \caption{Pictures of animals}
+    \label{fig:Baseline_hazard_and_survival}
 \end{figure}
   	
 	
-	\subsection {Estimating $\lambda$ estimates on pvalues calculated}
-\begin{figure}[h]
+	
+	\subsection { Multiple hypothesis correction }
+	
+	\subsubsection {Estimating $\pi_0$ estimates on pvalues}
+	
+	Storey and Tibshirani \cite{storey2003statistical} provided the mathematical implementation for false positive discovery rate. 
+
+
+\begin{figure}[bh]
     \centering
       \includegraphics[width=\textwidth]{lambdaestimatescurvefitting.png}
     \caption{Pictures of animals}\label{fig:animals}
 \end{figure}
 
 
-	\subsection {Estimation of expression levels based on FDR}
-\begin{figure}[h]
+	\subsubsection {Estimation of expression levels based on FDR}
+\begin{figure}[bh]
     \centering
       \includegraphics[width=\textwidth]{comb.png}
     \caption{Pictures of animals}\label{fig:animals}
 \end{figure}
 
-\bibliographystyle{unsrt}
+\bibliographystyle{ieeetr}
 \bibliography{lib}
 
 \end{document}
