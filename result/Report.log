@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 FEB 2018 10:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 FEB 2018 15:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -527,7 +527,25 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-) (./Report.aux)
+)
+
+LaTeX Warning: Unused global option(s):
+    [9pt].
+
+(./Report.aux
+
+LaTeX Warning: Label `fig:animals' multiply defined.
+
+
+LaTeX Warning: Label `fig:animals' multiply defined.
+
+
+LaTeX Warning: Label `fig:animals' multiply defined.
+
+
+LaTeX Warning: Label `fig:animals' multiply defined.
+
+)
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -544,7 +562,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
 \scratchdimen=\dimen128
@@ -612,57 +630,84 @@ p://kaell.org/files/survivalLIHC.txt)
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<livingstatusandstatus.png, id=53, 578.16pt x 397.485pt>
-File: livingstatusandstatus.png Graphic file (type png)
+[2] <Genderandstatus.png, id=63, 867.24pt x 433.62pt>
+File: Genderandstatus.png Graphic file (type png)
 
-<use livingstatusandstatus.png>
-Package pdftex.def Info: livingstatusandstatus.png used on input line 55.
-(pdftex.def)             Requested size: 170.77478pt x 117.40262pt.
+<use Genderandstatus.png>
+Package pdftex.def Info: Genderandstatus.png used on input line 55.
+(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
+ [3 <./Genderandstatus.png>]
+<survial_plot_one_mock_gene.png, id=72, 433.62pt x 289.08pt>
+File: survial_plot_one_mock_gene.png Graphic file (type png)
 
-Overfull \hbox (15.52583pt too wide) in paragraph at lines 55--56
-[][] 
- []
+<use survial_plot_one_mock_gene.png>
+Package pdftex.def Info: survial_plot_one_mock_gene.png used on input line 87.
+(pdftex.def)             Requested size: 258.75pt x 172.50978pt.
 
-<GenderVSstatus.png, id=55, 578.16pt x 397.485pt>
-File: GenderVSstatus.png Graphic file (type png)
- <use GenderVSstatus.png>
-Package pdftex.def Info: GenderVSstatus.png used on input line 60.
-(pdftex.def)             Requested size: 170.77478pt x 117.40262pt.
 
-Overfull \hbox (15.52583pt too wide) in paragraph at lines 60--61
-[][] 
- []
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 92.
 
-[2]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\lambda' on input line 92.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 92.
+
+<lambdaestimatescurvefitting.png, id=73, 867.24pt x 433.62pt>
+File: lambdaestimatescurvefitting.png Graphic file (type png)
+
+<use lambdaestimatescurvefitting.png>
+Package pdftex.def Info: lambdaestimatescurvefitting.png used on input line 95.
+
+(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
+ <comb.png, id=74, 867.24pt x 433.62pt>
+File: comb.png Graphic file (type png)
+
+<use comb.png>
+Package pdftex.def Info: comb.png used on input line 103.
+(pdftex.def)             Requested size: 345.0pt x 172.49876pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 No file Report.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
-[3 <./livingstatusandstatus.png> <./GenderVSstatus.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+[4 <./survial_plot_one_mock_gene.png> <./lambdaestimatescurvefitting.png>]
+[5 <./comb.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
  (./Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: F964DCC9969C34CAF31942D097B9C79B;598.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
+(rerunfilecheck)             Checksum: B374B47BB49ABFF56086914E6CD9246E;766.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
- 8147 strings out of 493089
- 118477 string characters out of 6134842
- 218038 words of memory out of 5000000
- 11514 multiletter control sequences out of 15000+600000
- 11494 words of font info for 45 fonts, out of 8000000 for 9000
+ 8156 strings out of 493089
+ 118687 string characters out of 6134842
+ 221049 words of memory out of 5000000
+ 11515 multiletter control sequences out of 15000+600000
+ 11195 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,40p,1065b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,17n,40p,1065b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on Report.pdf (3 pages, 257280 bytes).
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on Report.pdf (5 pages, 606600 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 22 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
