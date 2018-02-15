@@ -20,19 +20,19 @@
 
 \begin{document}
 
-\maketitle
 
 \section{Introduction}
 
 Survival analysis are statistical toolkits that are used to analyzing the outcome of variables based on time period of event occurrence. The event could be either be death, outbreak of disease or failure of automobile parts which are then followed specified time period in days, weeks or years. 
 
-The survuval analysis datset consists of two kinds of response variables:first, the time to event and second the information on event occurrences. Various parametric and semi/non - parametic methods are developed to evaluate time based response of event. Kaplan Meier method or regression model such as cox proportional hazards evaluates two functions that is  survival function and hazard function  based on these response variables with other categorical and numerical dependent variables. The survival function gives the probability  for each time-points of surviving up to that events while hazard function whether the event has occurred or not  given the individual survival. The main aim of these type of analysis is find the relationship between the survival time and variables under study such as drugs, gene expression, treatment either with or independent on different covariates such as age, gender, race.
+The survival analysis datset consists of two kinds of response variables:first, the time to event and second the information on event occurrences. Various parametric and semi/non - parametic methods are developed to evaluate time based response of event. Kaplan Meier method or regression model such as cox proportional hazards evaluates two functions that is  survival function and hazard function  based on these response variables with other categorical and numerical dependent variables. The survival function gives the probability  for each time-points of surviving up to that events while hazard function whether the event has occurred or not  given the individual survival. The main aim of these type of analysis is find the relationship between the survival time and variables under study such as drugs, gene expression, treatment either with or independent on different covariates such as age, gender, race.
 
-In the current project, using publicly available large scale expression prwe are provided a liver cancer patients of different races  dataset survival time and gene expression dataset of various grades. The main aim was to model the data with survival model in order find the potential prognostic marker for survival of patients using Cox Proportional Hazard models. Additionally, using the multiple hypothesis correction we predicted 4698 gene transcripts at 0.05 FDR. 
+In the current project, using publicly available high-throughput RNA expression of liver cnacer tumor sample, subsequent phenotype characterstic and time of survial information, we aimed at evaluating survival analysis of each gene transcipt. The raw data were subsequently preprocessed, fitted into cox propotional regression hazard model and each gene transcript was evaluated for potential prognostic marker for survial of patients at 5\% and 1\% false discovery rate.
+ 
 
 \section{Method}
 
-	\subsection{TCGA Dataset}
+	\subsection{Acquistion of raw TCGA Dataset}
 The  TCGA dataset for the analysis was download from the (http://kaell.org/files/survivalLIHC.txt) site. As already stated in the project guidelines, these are the cancer patient expression data from the sequenced liver tumor.  Additionally there are few other features implication each cancer patient ethnicity, sex and cancer types.  These data were first read into python notebook as pandas data frame  as done in  jupyter notebook.  Additional exploratory analysis was done in the notebook itself. The  dataset consists of both categorical features and numerical data of gene expression dataset. 
 
 	\subsection {Preprocessing of Dataset}
