@@ -1,11 +1,28 @@
-\documentclass{article}
-\usepackage{float}
-\usepackage[caption = false]{subfig}
-\usepackage[demo]{graphicx}
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{subcaption}
+\usepackage{hyperref, url}
+\parindent 0mm
+\parskip 3mm
+
 \begin{document}
 \begin{figure}
-\subfloat[fig 1]{\includegraphics[width = \textwidth]{livingstatusandstatus.png}} 
-\caption{Add your own figures before compiling}
-\label{some example}
+    \centering
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=1.1\textwidth]{livingstatusandstatus.png}
+        \caption{A gull}
+        \label{fig:gull}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=1.1\textwidth]{GenderVSstatus.png}
+          \caption{A tiger}
+          \label{fig:tiger}
+    \end{subfigure}
+    \caption{Pictures of animals}\label{fig:animals}
 \end{figure}
+
 \end{document}

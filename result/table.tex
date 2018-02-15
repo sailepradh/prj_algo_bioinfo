@@ -1,0 +1,40 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{subcaption}
+\usepackage{hyperref, url}
+ \usepackage[table,xcdraw]{xcolor}
+\parindent 0mm
+\parskip 3mm
+
+
+
+
+\begin{document}
+
+\begin{table}[bh]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor[HTML]{96FFFB}{\color[HTML]{FE0000} Summary statistics of TCGA liver cancer cohorts}}                                                                                                                                 \\ \hline
+\multicolumn{2}{|c|}{Gender}                                                                                                                                                                                                                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}male\\ \\ female\end{tabular}                                                                                                        & \begin{tabular}[c]{@{}l@{}}245\\ \\ 119\end{tabular}                               \\ \hline
+\multicolumn{2}{|c|}{Race}                                                                                                                                                                                                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}white\\ asian\\ black or african american\\ not reported\\ american indian or alaska native\end{tabular}                             & \begin{tabular}[c]{@{}l@{}}182\\ 154\\ 17\\ 10\\ 1\end{tabular}                    \\ \hline
+\multicolumn{2}{|c|}{Liver cancer stage}                                                                                                                                                                                                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}stage i\\ stage ii\\ stage iiia\\ not reported\\ stage iiic\\ stage iiib\\ stage iii\\ stage ivb\\ stage iv\\ stage iva\end{tabular} & \begin{tabular}[c]{@{}l@{}}170\\ 83\\ 63\\ 24\\ 9\\ 8\\ 3\\ 2\\ 1\\ 1\end{tabular} \\ \hline
+\multicolumn{2}{|c|}{Status}                                                                                                                                                                                                                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}alive\\ dead\end{tabular}                                                                                                            & \begin{tabular}[c]{@{}l@{}}234\\ 130\end{tabular}                                  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+\end{document}

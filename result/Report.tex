@@ -6,6 +6,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{subcaption}
 \usepackage{hyperref, url}
+ \usepackage[table,xcdraw]{xcolor}
 \parindent 0mm
 \parskip 3mm
 
@@ -31,27 +32,38 @@ In the current project, we are provided a liver cancer patients of different rac
 The  TCGA dataset for the analysis was download from the (http://kaell.org/files/survivalLIHC.txt) site. As already stated in the project guidelines, these are the cancer patient expression data from the sequenced liver tumor.  Additionally there are few other features implication each cancer patient ethnicity, sex and cancer types.  These data were first read into python notebook as pandas dataframe  as done in  jupyter notebook.  Additional exploratory analysis was done in the notebook itself. The  dataset consists of both categorical features and numerical data of gene expression dataset. 
 
 	\subsection {Preprocessing of Dataset}
-In the survival analysis, the different categorical features were provided of liver cancer patients. These categorical features includes Gender, Race, Stage , Status, Age and LivingDays of different cancer patients.  These categorical features were then coded into different numerical codes for Originally, the dataset consists of gene expression profile os $19,571$. Furthermore, only those gene expression data were taken which had at least an expression in one of the patients. 
+In the survival analysis, the different categorical features were provided of liver cancer patients. These categorical features includes Gender, Race, Stage , Status, Age and LivingDays of different cancer patients.  These categorical features were then coded into different numerical codes . Originally, the dataset consists of gene expression profile os $19,571$. Furthermore, only those gene expression data were taken which had at least an expression in one of the patients.  
 
 	\subsection{Cox proportional Hazard model}
-
+	 Cox proportional hazards regression, used to relate several risk factors or exposures, considered simultaneously, to survival time. In the current project we used the implementation of Cox regression hazard model implemented on lifelines packages. Although I had tried including other covariates such as age and temperature to be used in the model, at this phase we have used indivudal expression of each gene transcript iteratively in order to get hazard function and survival rates of each gene transcripts. 
+	 
+	\subsection {Multiple testing correction}
+	As discussed in earlier exercises we have  implemented mutliple testing correction for all the p.value estimates of gene expression for liver cancer to occur. However since we are testing multiple features, the pvalue $<$ 0.05 might be too lenient estimates. Hence based on storey and tribasni papser \cite {} an q value estimates were made of all the pvalues calcualted.
+	 
 
 
  \section{Result}
  
  	\subsection {TCGA Liver cancer charcterstics}
  
- The data consists of 6 catagorical features as 
+ The data consists of 6 categorical features as shown in table 1 . Additionally since we are interested to know the dependent variable of event that in our case alive and death as a function of Living day we can observe the marked difference of alive and death events in patient cohort .  Additionally, there is markedly difference in gender distribution  in cancer cohort with more than half of the patient are male as shown in fig 2  and table 1
 
-\begin{figure}[ht]
+\begin{figure}[bh]
     \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{livingstatusandstatus.png}
+      \includegraphics[width=\textwidth]{table.pdf}
+    \caption{Pictures of animals}\label{fig:animals}
+\end{figure}
+  
+
+\begin{figure}[bh]
+    \centering
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=1.1\textwidth]{livingstatusandstatus.png}
         \caption{A gull}
         \label{fig:gull}
     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-       	 \includegraphics[width=\textwidth]{GenderVSstatus.png}
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=1.1\textwidth]{GenderVSstatus.png}
           \caption{A tiger}
           \label{fig:tiger}
     \end{subfigure}
