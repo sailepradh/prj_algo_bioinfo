@@ -31,6 +31,7 @@ The survival analysis datset consists of two kinds of response variables:first, 
 In the current project, using publicly available high-throughput RNA expression of liver cnacer tumor sample, subsequent phenotype characterstic and time of survial information, we aimed at evaluating survival analysis of each gene transcipt. The raw data were subsequently preprocessed, fitted into cox propotional regression hazard model and each gene transcript was evaluated for potential prognostic marker for survial of patients at 5\% and 1\% false discovery rate.
  
 
+
 \section{Material and Method}
 
 	\subsection{Acquistion of raw TCGA Dataset}
@@ -45,18 +46,19 @@ The provided raw dataset consists of detailed information of patient phenotypes,
 	\subsection {Multiple testing correction}
 	In order to control the false postive rate due to multiple feature testing, we implemented Storey and Tibshirani \cite{storey2003statistical} $q$ value estimates based on cox modeled p-value of gene transcript. As discussed in earlier exercises we have  implemented multiple testing correction Furthermore, we estimated $\hat {\pi_0}$ from differnt $\lambda$ values in order to make q value estimates  of $i$th significant feature. These implementation were made on python and can be observed in associated notebook.
 
- \section{Result}
-	\subsection {TCGA Liver Cancer cohort characterstics}
+\section{Result}
+
+\subsection {TCGA Liver Cancer patient phenotype}
  
-The cancer cohort consists of different phenotypic features such liver cancer types, age, gender, which are further summarized in table~\ref{tab:table1} . Importantly, the important dependent variable is the status of an patient cohort  and the  living days which is the measure of the time of survival.. The average living days for alive  patient cohort is  896.80 while for dead sample cohort is 655.21 with pvalues $< 0.001$ as figure~\ref{fig:status_livingdays}
+The cancer cohort consists of different phenotypic features such liver cancer types, age, gender, which are further summarized in table~\ref{tab:table1} . The major of samples were white male withe stage i liver cancer subtype. Importantly, as we are interested in survival analysis, the  important dependent variables are the status of each patient  and the  living days which is then fed into the survival analysis. To end this , we observed that average living days for alive  patient cohort is slignificantly differnt: patients that were dead lived  655.21 while living had living days of 896.80 at $p$ $< 0.01$ as figure~\ref{fig:status_livingdays}
  
  \begin{table}[h]
-\centering
-\scalebox{0.65}{
+	\centering
+	\scalebox{0.5}{
 	\begin{tabular}{|l|l|}
-	\hline
-		\multicolumn{2}{|l|}{\cellcolor[HTML]{96FFFB}{\color[HTML]{FE0000} Summary statistics of TCGA liver cancer cohorts}}                                                                                                                                 	\\ \hline
-		\multicolumn{2}{|c|}{Gender}                                                                                                                                                                                                                         	\\ \hline
+		\hline
+		\multicolumn{2}{|l|}{\cellcolor[HTML]{96FFFB}{\color[HTML]{FE0000} Summary statistics of TCGA liver cancer cohorts}}                                                                                                                                 	\\ 	\hline
+		\multicolumn{2}{|c|}{Gender}                                                                                                                                                                                                                         	\\ 	\hline
 			\begin{tabular}[c]{@{}l@{}}male\\ \\ female\end{tabular}                                                                                                       & \begin{tabular}[c]{@{}l@{}}245\\ \\ 		119\end{tabular}                               \\ \hline
 		\multicolumn{2}{|c|}{Race}                                                                                                                                                                                                                           \\ \hline
 			\begin{tabular}[c]{@{}l@{}}white\\ asian\\ black or african american\\ not reported\\ american indian or alaska native\end{tabular}                             & \begin{tabular}[c]{@{}l@{}}182\\ 154\\ 17\\ 10\\ 1\end{tabular}                    \\ \hline
@@ -71,14 +73,14 @@ The cancer cohort consists of different phenotypic features such liver cancer ty
 
 \begin{figure}[tbh]
     \centering
-      \includegraphics[width=0.75\textwidth]{Genderandstatus.png}
+     \includegraphics[width=0.75\textwidth]{Genderandstatus.png}
     \caption{A) Number of alive and dead patients in the liver cancer cohort, the number of alive patients are nearly twice as many as dead patients. B) Distribution of living days in two status group , alive and dead.\tiny}
     \label{fig:status_livingdays}
 \end{figure}
 
-	\subsection {Gene expression survival analysis with Cox regression model }
+	\subsection {Gene expression survival analysis with Cox regression model}
 	
-	The survival analysis requires the time period for the event to occur (in our case death). Thus , in liver cancer cohort variable living days was taken as time variable with status as hazard event. However, other variables had $NA$ available  some categorical features so these were not taken into consideration while building Cox regression hazard model implementation in lifeline module in python. Each transcript was taken as dependent variables in the model which gave us survival probabilities and cumulative hazard estimates for each transcript as shown in the figure~\ref{fig:Baseline_hazard_and_survival}. However not all the gene transcript ran into the model as these gene expression were spares and had missing expression data. These 130 features were excluded from the current analysis.  The cox regression model was run in 19219 gene transcripts completely which gave us hazard, survival function. These estimates provided the p-values as the measure of the significance of gene expression as prognostic marker for  liver cancer survival. Out of 19219 gene expression $6032$ gene expression was considered significant at p-value $< 0.05$. However these are raw p-value without taking into account Cox regression model was run for 19219 features.   
+	The survival analysis requires the time period for the event to occur (in our case death). Thus , in liver cancer cohort variable living days was taken as time variable with status as hazard event. However, other catagorical variables had $NANs$ data so these were not taken into consideration while building Cox regression hazard model implementation in lifeline module in python. Each transcript was taken as dependent variables in the model which gave us survival probabilities and cumulative hazard estimates for each transcript as shown in the figure~\ref{fig:Baseline_hazard_and_survival}. However not all the gene transcript ran into the model as these gene expression were spares and had missing expression data. These 130 features were excluded from the current analysis.  The cox regression model was run in 19219 gene transcripts completely which gave us hazard coefficent and survival probability based on expression profile of each gene transcript. These estimates provided the p-values as the measure of the significance of gene expression as prognostic marker for  liver cancer survival. Out of 19219 gene expression $6032$ gene expression was considered significant at $p$ $< 0.05$. However these are raw p-value without taking into account Cox regression model was run for 19219 gene expression. 
 	
 \begin{figure}[tbh]
     \centering
@@ -87,13 +89,14 @@ The cancer cohort consists of different phenotypic features such liver cancer ty
     \label{fig:Baseline_hazard_and_survival}
 \end{figure}
   		
-	\subsection { Multiple hypothesis correction }
 	
-	\subsubsection {Estimating $\pi_0$ estimates on pvalues}
+	\subsection { Storey and Tibshirani \cite{storey2003statistical}  based multiple hypothesis correction }
 	
-	Storey and Tibshirani \cite{storey2003statistical} provided the mathematical implementation for false positive discovery rate.  Using the implementation as discussed in the paper we calculated the $\pi_0$ estimates. Using the cublc spline fitting $\pi_0$ and  $\lambda$ values we calculated the  $\hat {\pi_0}$ for the p-values obtained from Cox model for each transcript as shown in figure~\ref{fig:estimate_pi}. The  $\hat {\pi_0}$  was estimated at $0.56$. 
-\vspace{50cm} 
-\begin{figure}
+	\subsubsection {Estimating $\pi_0$ estimates on $p$}
+	
+	Storey and Tibshirani \cite{storey2003statistical} provided the mathematical implementation for false positive discovery rate.  Using the implementation as discussed in the paper we calculated the $\pi_0$ estimates. Using the cublc spline fitting $\pi_0$ and  $\lambda$ values we calculated the  $\hat {\pi_0}$ for the $p$ values obtained from Cox model for each transcript as shown in figure~\ref{fig:estimate_pi}. The  $\hat {\pi_0}$  was estimated at $0.56$. 
+
+\begin{figure}[bh]
     \centering
      \includegraphics[width=\textwidth]{lambdaestimatescurvefitting.png}
     \caption{ A) $\pi_0$ estimates of $\lambda$  for $0.01$ to $0.95$ using the Storey and Tibshirani \cite{storey2003statistical} implementation in python. B) Cubic spline fitting to $\pi_0$  and $\lambda$ estimates. The blue points are subsets of real data and dotted lines are corresponding  fitted cublic spline   \tiny}
@@ -101,20 +104,23 @@ The cancer cohort consists of different phenotypic features such liver cancer ty
 \end{figure}
 
 	\subsubsection {Estimation of q-values based on $\hat {\pi_0}$  values }
-	 For each p-values of the transcript gene expression, a $\hat {\pi_0}$ $p_i$  was implemented in python in order to find the estimated q values for the  $i$th significant features using the equation as defined in Storey and Tibshirani \cite{storey2003statistical}. As shown in figure~\ref{fig:estimate_pi} we are able to control the false postive rates for p values calculated. We are able to find at least 4649 expressed gene transcript at $q$ $<$ $0.05$ . However considering the number of features tested we can further go to stricter cutoff such as $q < 0.01$ which would yield us 2464 gene transcript expression  as prognostic marker of liver cancer survival. 
 
-	
+
 \begin{figure}
 \hspace*{-4cm}         
 \centering
      \includegraphics[width=1.57\textwidth]{comb.png}
-    \caption{A) p VS q values for  different gene expression features. B) The number of $p$ values accepted at $q$ values $0.05$ . C) The number of $p$ values accepted at $q$ values $0.01$}
-    \label{fig:animals}
-\end{figure}
-
-
+    \caption{A) $p$ and $q$ values for  different gene expression features. B) The number of $p$ values accepted at $q$ values $0.05$ . C) The number of $p$ values accepted at $q$ values $0.01$}
+    \label{fig:pandq}
+\end{figure}	
+	
+	 For each p-values of the transcript gene expression, a $\hat {\pi_0}$ $p_i$  was implemented in python in order to find the estimated q values for the  $i$th significant features using the equation as defined in Storey and Tibshirani \cite{storey2003statistical}. As shown in figure~\ref{fig:pandq} we are able to control the false postive rates for p values calculated. We are able to find at least 4649 expressed gene transcript at $q$ $<$ $0.05$ . However considering the number of features tested we can further go to stricter cutoff such as $q < 0.01$ which would yield us 2464 gene transcript expression  as prognostic marker of liver cancer survival. 
 
 \newpage
+
+\section{Conclusion}
+In the current project we took a publicly available TCGA liver cancer expression and survial time to model a Cox's proportional hazard model. At FDR $1\%$ and $5\%$ we found $2164$ and $4649$ gene transcripts as prognostic for survival of the patients. Interestingly,  one of the top gene transcripts ENSG00000183520 is a prognostic  marker  for liver cancer as indicated into human protein atlas \cite{uhlen2015tissue}.
+
 \bibliographystyle{plain}
 \bibliography{new_lib}
 
