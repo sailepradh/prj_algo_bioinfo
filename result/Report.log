@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 FEB 2018 00:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 FEB 2018 01:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -529,20 +529,20 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ) (./Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
@@ -575,7 +575,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 22.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -585,114 +585,104 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count121
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
 
 (./Report.out) (./Report.out)
 \@outlinefile=\write3
 \openout3 = `Report.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (84.26364pt too wide) in paragraph at lines 37--38
-\OT1/cmr/m/n/10 The TCGA dataset for the anal-y-sis was down-load from the (htt
-p://kaell.org/files/survivalLIHC.txt)
- []
+) [1
 
-[1
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Genderandstatus.png, id=64, 867.24pt x 433.62pt>
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<Genderandstatus.png, id=78, 867.24pt x 433.62pt>
 File: Genderandstatus.png Graphic file (type png)
  <use Genderandstatus.png>
-Package pdftex.def Info: Genderandstatus.png used on input line 79.
+Package pdftex.def Info: Genderandstatus.png used on input line 74.
 (pdftex.def)             Requested size: 258.75pt x 129.37242pt.
 
-[2] [3 <./Genderandstatus.png>]
-<survial_plot_one_mock_gene.png, id=84, 433.62pt x 289.08pt>
+[3] <survial_plot_one_mock_gene.png, id=90, 433.62pt x 289.08pt>
 File: survial_plot_one_mock_gene.png Graphic file (type png)
 
 <use survial_plot_one_mock_gene.png>
-Package pdftex.def Info: survial_plot_one_mock_gene.png used on input line 90.
+Package pdftex.def Info: survial_plot_one_mock_gene.png used on input line 85.
 (pdftex.def)             Requested size: 258.75pt x 172.50978pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 97.
+(hyperref)                removing `math shift' on input line 92.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pi' on input line 97.
+(hyperref)                removing `\pi' on input line 92.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 97.
+(hyperref)                removing `subscript' on input line 92.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 97.
+(hyperref)                removing `math shift' on input line 92.
 
-<lambdaestimatescurvefitting.png, id=87, 867.24pt x 433.62pt>
+<lambdaestimatescurvefitting.png, id=93, 867.24pt x 433.62pt>
 File: lambdaestimatescurvefitting.png Graphic file (type png)
 
 <use lambdaestimatescurvefitting.png>
-Package pdftex.def Info: lambdaestimatescurvefitting.png used on input line 103
-.
+Package pdftex.def Info: lambdaestimatescurvefitting.png used on input line 98.
+
 (pdftex.def)             Requested size: 345.0pt x 172.49876pt.
- [4 <./survial_plot_one_mock_gene.png>]
+ [4 <./Genderandstatus.png> <./survial_plot_one_mock_gene.png>] [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 108.
+(hyperref)                removing `math shift' on input line 103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 108.
+(hyperref)                removing `math shift' on input line 103.
 
-<comb.png, id=102, 1300.86pt x 433.62pt>
+<comb.png, id=112, 1300.86pt x 433.62pt>
 File: comb.png Graphic file (type png)
  <use comb.png>
-Package pdftex.def Info: comb.png used on input line 115.
+Package pdftex.def Info: comb.png used on input line 110.
 (pdftex.def)             Requested size: 541.65253pt x 180.55104pt.
 
-Overfull \hbox (85.06372pt too wide) in paragraph at lines 113--116
+Overfull \hbox (85.06372pt too wide) in paragraph at lines 108--111
  []|  [] 
  []
 
-[5 <./lambdaestimatescurvefitting.png>] (./Report.bbl
+[6 <./lambdaestimatescurvefitting.png>] (./Report.bbl
 Underfull \hbox (badness 1960) in paragraph at lines 8--12
 []\OT1/cmr/m/n/10 John D Storey and Robert Tib-shi-rani.  Sta-tis-ti-cal sig-ni
 f-i-cance for
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
- [6 <./comb.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
+ [7 <./comb.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
  (./Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 84606AE86E16834462F8B72998CDA2F5;892.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
+(rerunfilecheck)             Checksum: DD9C62E36BDD369A468CD1B59F773E9A;923.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 8183 strings out of 493089
- 119056 string characters out of 6134842
- 225015 words of memory out of 5000000
- 11530 multiletter control sequences out of 15000+600000
- 13702 words of font info for 53 fonts, out of 8000000 for 9000
+ 8186 strings out of 493089
+ 119083 string characters out of 6134842
+ 222012 words of memory out of 5000000
+ 11531 multiletter control sequences out of 15000+600000
+ 13870 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,17n,41p,1307b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -708,11 +698,12 @@ exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Report.pdf (6 pages, 938085 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Report.pdf (7 pages, 952734 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
+ 186 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
  117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
