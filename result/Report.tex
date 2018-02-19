@@ -1,5 +1,5 @@
-\documentclass{article}
-
+%\documentclass{article}
+\documentclass[9pt,twocolumn,twoside]{article}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -54,7 +54,7 @@ The cancer cohort consists of different phenotypic features such liver cancer ty
  
  \begin{table}[h]
 	\centering
-	\scalebox{0.5}{
+	\scalebox{0.95}{
 	\begin{tabular}{|l|l|}
 		\hline
 		\multicolumn{2}{|l|}{\cellcolor[HTML]{96FFFB}{\color[HTML]{FE0000} Summary statistics of TCGA liver cancer cohorts}}                                                                                                                                 	\\ 	\hline
@@ -73,7 +73,8 @@ The cancer cohort consists of different phenotypic features such liver cancer ty
 
 \begin{figure}[tbh]
     \centering
-     \includegraphics[width=0.75\textwidth]{Genderandstatus.png}
+    \scalebox{0.5}{
+     \includegraphics[width=\textwidth]{Genderandstatus.png}}
     \caption{A) Number of alive and dead patients in the liver cancer cohort, the number of alive patients are nearly twice as many as dead patients. B) Distribution of living days in two status group , alive and dead.\tiny}
     \label{fig:status_livingdays}
 \end{figure}
@@ -84,7 +85,8 @@ The cancer cohort consists of different phenotypic features such liver cancer ty
 	
 \begin{figure}[tbh]
     \centering
-      \includegraphics[width=0.75\textwidth]{survial_plot_one_mock_gene.png}
+    \scalebox{0.5}{
+      \includegraphics[width=\textwidth]{survial_plot_one_mock_gene.png}}
     \caption{The baseline cumulative hazard function for a mock gene transcript $ENSG00000000003$   The p-value for the transcript was $0.43$ with hazard coefficient of $-0.0057$ indicating that it is not a reliable prognostic marker of liver caner prognosis.}
     \label{fig:Baseline_hazard_and_survival}
 \end{figure}
@@ -98,7 +100,8 @@ The cancer cohort consists of different phenotypic features such liver cancer ty
 
 \begin{figure}[bh]
     \centering
-     \includegraphics[width=\textwidth]{lambdaestimatescurvefitting.png}
+    \scalebox{0.5}{
+     \includegraphics[width=\textwidth]{lambdaestimatescurvefitting.png}}
     \caption{ A) $\pi_0$ estimates of $\lambda$  for $0.01$ to $0.95$ using the Storey and Tibshirani \cite{storey2003statistical} implementation in python. B) Cubic spline fitting to $\pi_0$  and $\lambda$ estimates. The blue points are subsets of real data and dotted lines are corresponding  fitted cublic spline   \tiny}
     \label{fig:estimate_pi}
 \end{figure}
@@ -109,18 +112,19 @@ The cancer cohort consists of different phenotypic features such liver cancer ty
 \begin{figure}
 \hspace*{-4cm}         
 \centering
-     \includegraphics[width=1.57\textwidth]{comb.png}
+\scalebox{0.5}{
+     \includegraphics[width=1.57\textwidth]{comb.png}}
     \caption{A) $p$ and $q$ values for  different gene expression features. B) The number of $p$ values accepted at $q$ values $0.05$ . C) The number of $p$ values accepted at $q$ values $0.01$}
     \label{fig:pandq}
 \end{figure}	
 	
 	 For each p-values of the transcript gene expression, a $\hat {\pi_0}$ $p_i$  was implemented in python in order to find the estimated q values for the  $i$th significant features using the equation as defined in Storey and Tibshirani \cite{storey2003statistical}. As shown in figure~\ref{fig:pandq} we are able to control the false postive rates for p values calculated. We are able to find at least 4649 expressed gene transcript at $q$ $<$ $0.05$ . However considering the number of features tested we can further go to stricter cutoff such as $q < 0.01$ which would yield us 2464 gene transcript expression  as prognostic marker of liver cancer survival. 
 
-\newpage
 
 \section{Conclusion}
 In the current project we took a publicly available TCGA liver cancer expression and survial time to model a Cox's proportional hazard model. At FDR $1\%$ and $5\%$ we found $2164$ and $4649$ gene transcripts as prognostic for survival of the patients. Interestingly,  one of the top gene transcripts ENSG00000183520 is a prognostic  marker  for liver cancer as indicated into human protein atlas \cite{uhlen2015tissue}.
 
+\newpage
 \bibliographystyle{plain}
 \bibliography{new_lib}
 
